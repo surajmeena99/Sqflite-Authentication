@@ -23,8 +23,9 @@ class _LoginScreenState extends State<LoginScreen> {
     var response = await DatabaseHelper().login(
       Users(
         usrName: username.text, 
-        usrPassword: password.text)
-      );
+        usrPassword: password.text,
+      )
+    );
     if (response == true) {
       if (!mounted) return;
       Navigator.pushReplacement(
@@ -47,9 +48,17 @@ class _LoginScreenState extends State<LoginScreen> {
               key: formKey,
               child: Column(
                 children: [
-                  Image.asset(
-                    "assets/login.png",
-                    width: 210,
+                  Container(
+                    width: 200,
+                    height: 200,
+                    padding: const EdgeInsets.all(20.0),
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: Colors.purple.shade50,
+                    ),
+                    child: Image.asset(
+                      "assets/login.png",
+                    ),
                   ),
                   const SizedBox(height: 15),
                   //username field
