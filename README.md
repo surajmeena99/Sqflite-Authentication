@@ -31,7 +31,7 @@ What did you learn while building this project?
 
 ✅ CRUD Operations Using Sqflite 
 
-✅ Sqflite Authenticatio
+✅ Sqflite Authentication
 
 ## ScreenShots
 
